@@ -20,6 +20,9 @@ $(call inherit-product, vendor/aosp/config/versioning.mk)
 # Inherit from our kernel/header generator
 $(call inherit-product, vendor/aosp/config/BoardConfigAosp.mk)
 
+# Inherit boot animation
+$(call inherit-product, vendor/aosp/config/bootanimation.mk)
+
 # ThemePicker
 PRODUCT_PACKAGES += \
     ThemePicker
