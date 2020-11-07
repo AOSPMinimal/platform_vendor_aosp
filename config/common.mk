@@ -46,3 +46,7 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/products/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
     vendor/aosp/products/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
+
+# Pixel APNs
+PRODUCT_COPY_FILES += \
+    vendor/aosp/products/common/telephony/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
