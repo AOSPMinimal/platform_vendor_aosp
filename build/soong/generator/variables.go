@@ -6,12 +6,12 @@ import (
 	"android/soong/android"
 )
 
-func stormbreakerExpandVariables(ctx android.ModuleContext, in string) string {
-	stormbreakerVars := ctx.Config().VendorConfig("stormbreakerVarsPlugin")
+func aospExpandVariables(ctx android.ModuleContext, in string) string {
+	aospVars := ctx.Config().VendorConfig("aospVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
-		if stormbreakerVars.IsSet(name) {
-			return stormbreakerVars.String(name), nil
+		if aospVars.IsSet(name) {
+			return aospVars.String(name), nil
 		}
 		// This variable is not for us, restore what the original
 		// variable string will have looked like for an Expand
