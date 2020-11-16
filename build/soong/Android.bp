@@ -1,14 +1,14 @@
 bootstrap_go_package {
-    name: "soong-stormbreaker",
-    pkgPath: "stormbreaker/soong/android",
+    name: "soong-aosp",
+    pkgPath: "aosp/soong/android",
     srcs: [
         "android/variable.go",
     ],
 }
 
 bootstrap_go_package {
-    name: "soong-stormbreaker-generator",
-    pkgPath: "stormbreaker/soong/generator",
+    name: "soong-aosp-generator",
+    pkgPath: "aosp/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",
@@ -23,7 +23,7 @@ bootstrap_go_package {
     pluginFor: ["soong_build"],
 }
 
-stormbreaker_generator {
+aosp_generator {
     name: "generated_kernel_includes",
 
     // The headers make command
