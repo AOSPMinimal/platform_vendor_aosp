@@ -19,3 +19,7 @@ $(call inherit-product, vendor/aosp/config/versioning.mk)
 
 # Inherit from our kernel/header generator
 $(call inherit-product, vendor/aosp/config/BoardConfigAosp.mk)
+
+# ThemePicker
+PRODUCT_PACKAGES += \
+    ThemePicker
