@@ -26,3 +26,16 @@ $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 # ThemePicker
 PRODUCT_PACKAGES += \
     ThemePicker
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/aosp/products/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/aosp/products/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/aosp/products/common/bin/50-base.sh:system/addon.d/50-base.sh
+
+ifneq ($(AB_OTA_PARTITIONS),)
+PRODUCT_COPY_FILES += \
+    vendor/aosp/products/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/aosp/products/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/aosp/products/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
