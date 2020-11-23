@@ -29,8 +29,8 @@ PRODUCT_PACKAGES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/aosp/products/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/aosp/products/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/aosp/products/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
+    vendor/aosp/products/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
     vendor/aosp/products/common/bin/50-base.sh:system/addon.d/50-base.sh
 
 ifneq ($(AB_OTA_PARTITIONS),)
