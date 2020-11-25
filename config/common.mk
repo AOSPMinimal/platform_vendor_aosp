@@ -26,9 +26,10 @@ $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 # Vendor overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay
 
-# ThemePicker
+# Apps
 PRODUCT_PACKAGES += \
-    ThemePicker
+    ThemePicker \
+    messaging
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
