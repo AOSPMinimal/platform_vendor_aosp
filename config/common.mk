@@ -23,17 +23,13 @@ $(call inherit-product, vendor/aosp/config/BoardConfigAosp.mk)
 # Inherit boot animation
 $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 
-# Inherit apps config
-$(call inherit-product, vendor/aosp/products/common/prebuilt/apps.mk)
-
 # Vendor overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay
 
 # Apps
 PRODUCT_PACKAGES += \
     ThemePicker \
-    messaging \
-    ViaBrowser
+    messaging
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
