@@ -22,4 +22,5 @@ $(call inherit-product, vendor/aosp/config/BoardConfigAosp.mk)
 
 # ThemePicker
 PRODUCT_PACKAGES += \
-    ThemePicker
+    ThemePicker \
+    messaging
