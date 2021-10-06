@@ -79,7 +79,8 @@ ifneq ($(USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR),true)
 endif
 
 PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
+    hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT) \
+    packages/apps/Bluetooth
 
 # QCOM HW crypto
 ifeq ($(TARGET_HW_DISK_ENCRYPTION),true)
